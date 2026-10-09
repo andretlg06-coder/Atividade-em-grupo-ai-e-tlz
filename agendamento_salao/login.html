@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+     <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <h1>Formulário</h1>
+
+    <p>Nome</p>
+    <input type="text" id="nome"><br>
+
+    <p>Data de nascimento</p>
+    <input type="date" id="nascimento"><br>
+
+    <p>Endereço</p>
+    <input type="text" id="endereco"><br>
+
+    <p>Sexo</p>
+    <select id="sexo">
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+    </select>
+
+    <p>Telefone</p>
+    <input type="tel" id="telefone"><br>
+
+    <p>Email</p>
+    <input type="email" id="email"><br><br>
+
+    <button onclick="salvarDados()">Enviar</button>
+
+    <script>
+        function salvarDados() {
+
+            localStorage.setItem("nome",
+                document.getElementById("nome").value);
+
+            localStorage.setItem("nascimento",
+                document.getElementById("nascimento").value);
+
+            localStorage.setItem("endereco",
+                document.getElementById("endereco").value);
+
+            localStorage.setItem("sexo",
+                document.getElementById("sexo").value);
+
+            localStorage.setItem("telefone",
+                document.getElementById("telefone").value);
+
+            localStorage.setItem("email",
+                document.getElementById("email").value);
+
+            // Vai para a página de agendamento
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>

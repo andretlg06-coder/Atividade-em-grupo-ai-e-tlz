@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <h1>Confirmação do Agendamento</h1>
+
+    <h2>Informações do cliente</h2>
+
+    <p><strong>Nome:</strong> <span id="nome"></span></p>
+
+    <p><strong>Data de nascimento:</strong> <span id="nascimento"></span></p>
+
+    <p><strong>Endereço:</strong> <span id="endereco"></span></p>
+
+    <p><strong>Sexo:</strong> <span id="sexo"></span></p>
+
+    <p><strong>Telefone:</strong> <span id="telefone"></span></p>
+
+    <p><strong>Email:</strong> <span id="email"></span></p>
+
+
+    <h2>Informações do agendamento</h2>
+
+    <p><strong>Serviço:</strong> <span id="servico"></span></p>
+
+    <p><strong>Data:</strong> <span id="data"></span></p>
+
+    <p><strong>Horário:</strong> <span id="horario"></span></p>
+
+
+    <script>
+        // Dados do cliente
+        document.getElementById("nome").textContent =
+            localStorage.getItem("nome");
+
+        document.getElementById("nascimento").textContent =
+            localStorage.getItem("nascimento");
+
+        document.getElementById("endereco").textContent =
+            localStorage.getItem("endereco");
+
+        document.getElementById("sexo").textContent =
+            localStorage.getItem("sexo");
+
+        document.getElementById("telefone").textContent =
+            localStorage.getItem("telefone");
+
+        document.getElementById("email").textContent =
+            localStorage.getItem("email");
+
+
+        // Dados do agendamento
+        document.getElementById("servico").textContent =
+            localStorage.getItem("servico");
+
+        document.getElementById("data").textContent =
+            localStorage.getItem("data");
+
+        document.getElementById("horario").textContent =
+            localStorage.getItem("horario");
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Serviço</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <h1>Agendar Serviço</h1>
+
+    <p>Escolha um serviço:</p>
+
+    <label>
+        <input type="radio" name="servico" value="Corte de cabelo">
+        Corte de cabelo
+    </label>
+
+    <br>
+
+    <label>
+        <input type="radio" name="servico" value="Manicure">
+        Manicure
+    </label>
+
+    <br>
+
+    <label>
+        <input type="radio" name="servico" value="Pedicure">
+        Pedicure
+    </label>
+
+    <br><br>
+
+    <button onclick="continuar()">Continuar</button>
+
+    <script>
+        function continuar() {
+
+            const servicoSelecionado =
+                document.querySelector('input[name="servico"]:checked');
+
+            if (!servicoSelecionado) {
+                alert("Escolha um serviço antes de continuar!");
+                return;
+            }
+
+            // Salva o serviço escolhido
+            localStorage.setItem(
+                "servico",
+                servicoSelecionado.value
+            );
+
+            alert("Serviço salvo com sucesso!");
+
+            // Próxima página
+            window.location.href = "horario.html";
+        }
+    </script>
+
+</body>
+</html>

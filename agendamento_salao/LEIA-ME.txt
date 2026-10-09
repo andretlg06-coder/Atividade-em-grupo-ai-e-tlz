@@ -1,0 +1,17 @@
+PROJETO DE AGENDAMENTO — BELEZA & BEM-ESTAR
+
+Arquivos:
+- login.html: formulário de cadastro
+- index.html: escolha do serviço
+- horario.html: escolha de data e horário
+- confirmacao.html: resumo do agendamento
+- style1.css até style4.css: estilos de cada página
+- imagens/: imagens de fundo usadas nos estilos
+
+COMO ABRIR:
+1. Extraia a pasta agendamento_salao.zip.
+2. Mantenha os quatro HTML, os quatro CSS e a pasta imagens juntos, sem mudar os nomes.
+3. Abra login.html no navegador.
+4. Preencha os dados e avance pelas páginas.
+
+Observação: os dados são guardados no localStorage do navegador. Este é um protótipo de estudo, não um sistema com banco de dados.
