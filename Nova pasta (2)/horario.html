@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data e horário</title>
+</head>
+<body>
+
+    <h1>Data e horário</h1>
+
+    <p>Escolha uma data</p>
+    <input type="date" id="data"><br>
+
+    <p></p>
+
+    <label for="horario">Horário disponível</label>
+
+    <select name="hora" id="horario">
+        <option value="09:00">9:00</option>
+        <option value="10:30">10:30</option>
+        <option value="14:00">14:00</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="confirmar()">Confirmar</button>
+
+    <script>
+        function confirmar() {
+
+            const data = document.getElementById("data").value;
+            const horario = document.getElementById("horario").value;
+
+            // Verifica se uma data foi escolhida
+            if (data === "") {
+                alert("Escolha uma data!");
+                return;
+            }
+
+            // Salva os dados
+            localStorage.setItem("data", data);
+            localStorage.setItem("horario", horario);
+
+            alert("Data e horário confirmados!");
+
+            // Vai para a página de confirmação
+            window.location.href = "confirmacao.html";
+        }
+    </script>
+
+</body>
+</html>
